@@ -1,6 +1,8 @@
 # radiko
 Easy access to programs on [radiko.jp](http://radiko.jp/) (onoffcial).
 
+![Screen Shot](./radiko_01.jpg)
+
 ## Install
 1. Setup [RubyPicoGems](https://github.com/rubypico/RubyPicoGems)
 2. Run `github_downaload.rb`

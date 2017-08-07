@@ -1,12 +1,13 @@
 # coding: utf-8
 require "radiko/radiko"
+include Radiko
 
 def c(channel, wday)
-  Radiko.new(channel, last_wday(wday + 1, 1, 0)).astr(channel)
+  Radiko::Radiko.new(channel, last_wday(wday + 1, 1, 0)).astr(channel)
 end
 
 def ann(title, wday)
-  print title, "\n", 
+  print title, "\n",
         c("LFR", wday), " ",
         c("CBC", wday), " ",
         c("RNB", wday), " ",

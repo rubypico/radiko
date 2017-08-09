@@ -30,7 +30,7 @@ module Radiko
     end
 
     def url
-      "http://radiko.jp/share/?sid=#{@channel}&t=#{time_url}"
+      "radiko://radiko.jp/share/?sid=#{@channel}&t=#{time_url}"
     end
 
     def astr(title)

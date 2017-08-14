@@ -69,11 +69,17 @@ module Radiko
     week = %w(sun mon tue wed thu fri sat)
 
     # weekday
-    r << week.index(w.downcase)
+    wi = week.index(w.downcase)
 
     # hour
     hour, min = t.split(":")
-    r << hour.to_i
+    hour = hour.to_i
+    if hour >= 24
+      hour -= 24
+      wi = wi == 6 ? 0 : wi + 1
+    end
+    r << wi
+    r << hour
 
     # min
     r << min.to_i
